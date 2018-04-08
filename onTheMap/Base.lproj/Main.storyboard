@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="onTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="onTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="-689" y="33"/>
         </scene>
-        <!--Map View Controller-->
+        <!--View Controller-->
         <scene sceneID="pZt-5V-71I">
             <objects>
-                <viewController id="b0o-Z3-fOf" customClass="MapViewController" customModule="onTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b0o-Z3-fOf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LvV-D1-3eD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,9 +159,13 @@
         <!--On The Map-->
         <scene sceneID="Pgd-PM-eH6">
             <objects>
-                <tabBarController id="lei-8i-1Em" sceneMemberID="viewController">
+                <tabBarController id="lei-8i-1Em" customClass="TabBarActions" customModule="onTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="On The Map" id="rKF-VU-Q2T">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="qmu-kA-HE4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="qmu-kA-HE4">
+                            <connections>
+                                <action selector="finishUserSession:" destination="lei-8i-1Em" id="L3p-2h-tb6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fS7-8I-9xS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
